@@ -27,15 +27,15 @@ const WellnessNavigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Button variant="ghost" className="flex items-center gap-2">
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/search'}>
               <Search className="h-4 w-4" />
               Finn Terapeuter
             </Button>
-            <Button variant="ghost" className="flex items-center gap-2">
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/about'}>
               <MapPin className="h-4 w-4" />
-              Områder
+              Om Oss
             </Button>
-            <Button variant="ghost" className="flex items-center gap-2">
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/dashboard'}>
               <Heart className="h-4 w-4" />
               Min Wellness
             </Button>

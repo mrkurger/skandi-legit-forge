@@ -46,7 +46,7 @@ const WellnessHero = () => {
                 className="pl-12 bg-transparent border-0 text-white placeholder:text-white/70 focus:ring-0"
               />
             </div>
-            <Button variant="wellness" size="lg" className="md:px-8">
+            <Button variant="wellness" size="lg" className="md:px-8" onClick={() => window.location.href = '/search'}>
               Søk Terapeuter
             </Button>
           </div>
