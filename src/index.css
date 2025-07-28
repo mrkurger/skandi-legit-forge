@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Nordic Wellness Design System - Professional Health & Wellness Platform
+All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Clean wellness whites and soft backgrounds */
+    --background: 160 20% 98%;
+    --foreground: 160 10% 15%;
 
+    /* Card system - Elevated wellness containers */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 160 10% 15%;
 
+    /* Interactive elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 160 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Calming wellness mint */
+    --primary: 160 35% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 160 25% 92%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Professional medical blue */
+    --secondary: 200 40% 96%;
+    --secondary-foreground: 160 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft neutral tones */
+    --muted: 160 15% 96%;
+    --muted-foreground: 160 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Wellness success green */
+    --accent: 145 50% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 145 35% 92%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - Gentle warning coral */
+    --destructive: 0 65% 65%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs - Subtle wellness tones */
+    --border: 160 20% 88%;
+    --input: 160 15% 94%;
+    --ring: 160 35% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Wellness-specific design tokens */
+    --wellness-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --wellness-gradient-soft: linear-gradient(135deg, hsl(var(--primary-soft)) 0%, hsl(var(--accent-soft)) 100%);
+    --wellness-shadow: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --wellness-shadow-hover: 0 8px 30px -8px hsl(var(--primary) / 0.25);
+    --wellness-border-radius: 12px;
+    --wellness-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
