@@ -31,6 +31,10 @@ const WellnessNavigation = () => {
               <Search className="h-4 w-4" />
               Finn Terapeuter
             </Button>
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/destinations'}>
+              <MapPin className="h-4 w-4" />
+              Destinasjoner
+            </Button>
             <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/about'}>
               <MapPin className="h-4 w-4" />
               Om Oss
