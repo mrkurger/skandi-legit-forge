@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 import { 
   Heart, 
   User, 
@@ -10,6 +11,8 @@ import {
 } from "lucide-react";
 
 const WellnessNavigation = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border/50">
       <div className="max-w-7xl mx-auto px-6">
@@ -27,19 +30,19 @@ const WellnessNavigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/search'}>
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => navigate('/search')}>
               <Search className="h-4 w-4" />
               Finn Terapeuter
             </Button>
-            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/destinations'}>
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => navigate('/destinations')}>
               <MapPin className="h-4 w-4" />
               Destinasjoner
             </Button>
-            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/about'}>
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => navigate('/about')}>
               <MapPin className="h-4 w-4" />
               Om Oss
             </Button>
-            <Button variant="ghost" className="flex items-center gap-2" onClick={() => window.location.href = '/dashboard'}>
+            <Button variant="ghost" className="flex items-center gap-2" onClick={() => navigate('/dashboard')}>
               <Heart className="h-4 w-4" />
               Min Wellness
             </Button>
