@@ -12,16 +12,10 @@ interface AdvertiserCardProps {
 }
 
 const AdvertiserCard = ({ title, subtitle, imageUrl, href, size, className }: AdvertiserCardProps) => {
-  const aspectRatioClass = {
-    square: "aspect-square",
-    tall: "aspect-[3/4] md:aspect-[2/3]",
-    wide: "aspect-[16/9]"
-  }[size];
-
   const spanClass = {
-    square: "",
-    tall: "lg:row-span-2",
-    wide: "sm:col-span-2"
+    square: "row-span-1",
+    tall: "sm:row-span-2 lg:row-span-3",
+    wide: "sm:col-span-2 row-span-1"
   }[size];
 
   return (
@@ -29,7 +23,6 @@ const AdvertiserCard = ({ title, subtitle, imageUrl, href, size, className }: Ad
       href={href}
       className={cn(
         "group relative block overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-        aspectRatioClass,
         spanClass,
         className
       )}

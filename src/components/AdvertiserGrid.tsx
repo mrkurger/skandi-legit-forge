@@ -18,7 +18,7 @@ interface AdvertiserGridProps {
 const AdvertiserGrid = ({ advertisers, className }: AdvertiserGridProps) => {
   return (
     <div className={cn("container mx-auto px-6 py-12", className)}>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-fr">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-[200px] grid-flow-dense">
         {advertisers.map((advertiser) => (
           <AdvertiserCard
             key={advertiser.id}
